@@ -1,0 +1,41 @@
+
+  - description: ""
+    label: "Blog"
+    name: "blog"
+    sort: 105
+    listed: true
+    parent: "0"
+    hasRoute: true
+    showAsTable: false
+    view: "/views/blog.tpl"
+    contents: "/content/blog.yaml"
+    fields:
+      - name: "blog_name"
+        label: "Blog name"
+        description: ""
+        datatype: "text"
+        sort: 10000
+        required: true
+        relationship: null
+        settings:
+          list: true
+  - description: ""
+    label: "Categories"
+    name: "categories"
+    sort: 107
+    listed: true
+    parent: "blog"
+    hasRoute: true
+    showAsTable: true
+    view: "/views/categories.tpl"
+    contents: "/content/categories.yaml"
+    fields:
+      - name: "name"
+        label: "Name"
+        description: ""
+        datatype: "text"
+        sort: 10000
+        required: true
+        relationship: null
+        settings:
+          list: true
